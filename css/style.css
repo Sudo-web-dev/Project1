@@ -6,25 +6,26 @@
   
   @font-face {
     font-family: "Open Sans";
-    src: url('../fonts/OpenSans-Regular.woff');
+    src: url('../fonts/OpenSans-Regular.woff2') format("woff2");
     font-weight: 400;
     font-style: normal;
   }
   
   @font-face {
     font-family: "Open Sans";
-    src: url('../fonts/OpenSans-Bold.woff');
-    font-weight: 700;
+    src: url('../fonts/OpenSans-Bold.woff2') format("woff2");
+    font-weight: 600;
     font-style: normal;
   }
   
-  body{
+  body {
     font-family: "Open Sans", sans-serif;
     font-size: 16px;
     line-height: 1.2;
   }
   
   .header {
+    width: 100%;
     background-image: url("../images/banner-bg.jpg");
     background-repeat: no-repeat;
     background-position: center center;
@@ -51,15 +52,25 @@
     width:180px;
   }
   
+  .hamburger-menu {
+    display: none;
+  }
+
+  .trends {
+    width: 100%;
+  }
+
   .current-trend {
     text-align: center;
     text-transform: uppercase;
+    margin-top: 50px;
   }
 
   .current-trend::after {
     content: "";
     display: block;
     margin: 10px auto 0;
+    margin-bottom: 30px;
     width: 66px;
     height: 3px;
     background:#b59f5b;
@@ -69,17 +80,14 @@
     max-width: 1660px;
     display: flex;
     margin: 0 auto;
-    justify-content: center;
     flex-wrap: nowrap;
     gap: 4px;
-    margin-top: 27px;
   }
   
   .trend-content {
     display: flex;
-    align-items: flex-end;
     width: calc(100%/4-3px);
-    min-height: 315px;
+    min-height: 310px;
     position: relative;
   }
 
@@ -113,6 +121,7 @@
 
   .category-link {
     margin-right: 20px;
+    margin-bottom: 10px;
   }
 
   .category-item {
@@ -176,7 +185,6 @@
   
   .menu-list {
     list-style: none;
-    font-family: Open Regular;
   }
   
   .menu-list-item {
@@ -196,7 +204,6 @@
 
 .main-title {
     text-align: center;
-    font-family: Open Bold;
     font-size: 45px;
     color: #ffffff;
     display: block;
@@ -257,7 +264,6 @@
   .tag{
     display: list-item;
     text-decoration: none;
-    font-family: Open Bold;
     text-transform: uppercase;
     color: #b59f5b;
     font-size: 14px;
@@ -266,7 +272,6 @@
   
   .post-title{
     margin-bottom: 15px;
-    font-family: Open Bold;
     text-transform: uppercase;
     font-size: 20px;
     text-decoration: none;
@@ -277,7 +282,6 @@
     line-height: 40px;
     color: #888888;
     font-size: 12px;
-    font-family: Open Regular;
     margin-bottom: 45px;
     font-weight: 400;
   }
@@ -287,21 +291,19 @@
     font-style: normal;
     color: #000000;
     font-size: 12px;
-    font-family: Open Bold;
     margin-left: 15px;
     font-weight: 700;
   }
   
   .post-info{
-    font-family: Open Regular;
     font-size: 15px;
     line-height: 22px;
     width:368px;
   }
   
   .aside {
-    width: 270px;
-    margin-left: 120px;
+    width: 272px;
+    margin-left: 15px;
   }
   
   .news {
@@ -314,9 +316,7 @@
     text-align: center;
     text-transform: uppercase;
     font-size: 14px;
-    font-family: Open Bold;
     text-align: center;
-    font-family: Open Bold;
     text-transform: uppercase;
     font-size: 14px;
     line-height: 1.2;
@@ -337,7 +337,6 @@
   .news-post-title {
     text-transform: uppercase;
     font-size: 14px;
-    font-family: Open Bold;
     text-decoration: none;
     color: #000;
     font-weight: 700;
@@ -351,7 +350,6 @@
   
   .post-date {
     font-size: 12px;
-    font-family: Open Regular;
     color: #888888;
   }
   
@@ -394,7 +392,6 @@
     border: none;
     width: 100%;
     background-color:#b59f5b;
-    font-family: Open Bold;
     text-transform: uppercase;
     color:#ffffff;
     font-size: 13px;
@@ -417,7 +414,6 @@
    flex-wrap: wrap;
    text-decoration: none;
    list-style: none;
-   font-family: Open Bold;
   }
   
   .tags-subject{
@@ -441,7 +437,6 @@
   .topic-subject {
    text-decoration: none;
    list-style: none;
-   font-family: Open Bold;
    margin-top: 10px;
    margin-left: 1px;
    margin-bottom: 23px;
@@ -481,7 +476,6 @@
   .product-box {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
     justify-content: center;
     width: 100%;
     gap: 70px;
@@ -504,7 +498,7 @@
 
   .product-content {
     position: relative;
-    flex-grow: 1;
+    flex-grow: 5;
     margin-top: -36px;
     padding: 53px 20px 27px 20px;
     z-index: 0;
@@ -558,7 +552,6 @@
     height: 48px;
     font-size: 14px;
     font-weight: 700;
-    font-family: inherit;
     text-transform: uppercase;
     color: #fff;
     background-color: #b59f5b;
@@ -689,7 +682,6 @@
   .popup-title {
     font-size: 20px;
     font-weight: bold;
-    font-family: OpenSansBold;
     text-transform: uppercase;
     color: #0f0d0e;
     text-align: center;
@@ -713,7 +705,6 @@
     text-align: start;
     margin-bottom: 10px;
     font-size: 18px;
-    font-family: OpenSans;
     font-weight: 400;
     color: #0f0d0e;
   }
@@ -836,3 +827,313 @@
   .send:hover {
     background-color: #000000;
   }
+
+  
+@media (min-width: 641px) and (max-width: 1199px) {
+  .header {
+    background-image: url('../images/banner-bg-tablet.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  .menu-list {
+    display: none;
+  }
+
+  .main-title {
+    font-size: 35px
+  }
+
+  .current-trend {
+    font-size: 18px;
+
+  }
+
+  .hamburger-menu {
+    display: block;
+  }
+
+  .trends {
+    max-width: 100%;
+  }
+
+  .trend-container {
+    flex-wrap: wrap;
+    max-width: 100%;
+    justify-content: space-between;
+  }
+
+  .title-content {
+    width: calc(50% - 4px);
+    margin: 4px 0;
+  }
+
+  .post {
+    margin-left: 35px;
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .post::after {
+  content: "";
+  display: block;
+  position: relative;
+  width: 391px;
+  height: 3px;
+  background: #eeeeee;
+  margin-bottom: 42px;
+  margin-top: 15px;
+  }
+
+  .post-list {
+    font-size: 15px;
+    line-height: 1.4;
+  }
+
+  .post-title {
+  width: 334px;
+  font-size: 20px;
+  line-height: 1.25;
+  }
+  
+  .time {
+  margin-top: 22px;
+  margin-bottom: 18px;
+ }
+  
+  .post-list {
+  width: 380px;
+  font-size: 14px;
+  line-height: 1.4;
+ }
+
+ .tag {
+  margin-top: 17px;
+ }
+
+ .image {
+  width: 392px;
+  margin-left: 16px;
+  margin-top: -30px;
+ }
+
+ .aside {
+  margin-right: 425px;
+ }
+
+ .product {
+  width: 100%;
+  padding: 0 36px;
+  margin-top: -30px;
+ }
+
+ .product-box {
+  display: flex;
+  flex-wrap: wrap;
+ }
+
+ .product-item {
+  width: calc(100% / 2 - 72px);
+  margin-bottom: 20px;
+  flex-grow: 0;
+  margin-right: 28px;
+ }
+
+ .product-content {
+  width: 340px;
+ }
+
+ .last-pic {
+  margin-right: 360px;
+ }
+
+ .footer {
+  width: 697px;
+}
+
+ .copyright-box {
+  margin-top: 30px;
+ }
+
+}
+
+@media (max-width: 640px) {
+  .header {
+  background-image: url('../images/banner-mobile.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-color: #000000;
+  }
+
+ .container {
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+  height: 484px;
+  position: relative;
+  }
+
+  .header-menu {
+  justify-content: flex-end;
+  }
+
+  .menu-list {
+  display: none;
+  }
+
+  .hamburger-menu {
+  display: block;
+  margin-right: 85px;
+  }
+
+  .header-logo {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 270px;
+  margin-bottom: 20px;
+  }
+
+  .main-title {
+  font-size: 26px;
+  width: 320px;
+  line-height: 1.4;
+  padding-top: 166px;
+  padding-bottom: 150px;
+  }
+
+ .current-trend {
+  font-size: 16px;
+ } 
+
+ .trend-container {
+  width: 100%;
+  display: flex; 
+  flex-wrap: wrap;
+ }
+
+ .title-content {
+  width: calc(100%-30px);
+  margin-left: 15px;
+  padding-left: 15px;
+ }
+
+  .posts {
+  display: flex;
+  flex-direction: column;
+  }
+
+  .post {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 55px;
+ }
+
+ .post::after {
+  content: "";
+  display: block;
+  position: relative;
+  width: 331px;
+  height: 3px;
+  background: #eeeeee;
+  margin-top: 21px;
+ }
+
+ .trend-content {
+  width: 100%;
+ }
+
+ .post-title {
+  width: 334px;
+  font-size: 20px;
+  line-height: 1.25;
+ }
+
+ .time {
+  margin-top: 22px;
+  margin-bottom: 18px;
+ }
+
+ .post-list {
+  width: 325px;
+  font-size: 14px;
+  line-height: 1.4;
+ }
+
+ .box {
+  width: 282px;
+ }
+
+ .pop-tags {
+  width: 331px;
+  box-sizing: border-box;
+  flex-grow: 1;
+ }
+
+ .tag {
+  margin-top: 17px;
+ }
+
+ .tags-list {
+  width: 331px;
+  display: flex;
+ }
+
+ .tags-link {
+  padding: 7px 12px;
+ }
+
+ .header-post {
+  margin-left: 0;
+  text-align: start;
+ }
+
+ .product-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ }
+
+ .product-item {
+  margin-bottom: 25px;
+ }
+
+ .product-title {
+  font-size: 16px;
+ }
+
+ .footer {
+  width: 369px;
+ }
+
+ .footer-bribbble {
+  background-image: url('../svg/001-dribbble.svg');
+  width: 19px;
+  height: 19px;
+ }
+
+ .footer-pinterest {
+  background-image: url("../svg/001-pinterest.svg");
+  width: 19px;
+  height: 19px;
+ }
+
+ .footer-tamblr {
+  background-image: url('../svg/003-tumblr.svg');
+  width: 19px;
+  height: 19px;
+  margin: 0;
+ }
+}
+
+@media (max-width: 640px) and (orientation: landscape) {
+  /* .trend-container {
+   width: calc((100% / 2) - 3px);
+  }
+  .title-content {
+    padding: 20px 10px 10px;
+  } */
+}
